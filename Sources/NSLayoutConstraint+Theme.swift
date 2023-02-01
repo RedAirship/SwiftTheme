@@ -6,9 +6,8 @@
 //  Created by Ryan Tan on 29/11/22.
 //
 
-import UIKit
-
 #if os(iOS)
+import UIKit
 extension NSLayoutConstraint {
 
     /// Sets constant for the constraint.
