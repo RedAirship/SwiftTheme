@@ -23,32 +23,57 @@ extension CALayer {
 
 @available(iOS 11.0, *)
 extension CALayer {
+    /// Logic function to check if initialize all masked corner radius
+    /// - Parameters:
+    ///   - cornerMask: specific corner.
+    ///   - radiusValue: corner radius value.
+    private func setCornerRadiusSpecific(_ cornerMask: CACornerMask,_ radiusValue: CGFloat) {
+        var maskedCornerRadius: CACornerMask
+        let allCorners: CACornerMask = [.layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+        if self.maskedCorners.contains(allCorners) {
+            maskedCornerRadius = [cornerMask]
+        } else {
+            maskedCornerRadius = self.maskedCorners
+            maskedCornerRadius.insert(cornerMask)
+        }
+        self.cornerRadius = radiusValue
+        self.maskedCorners = maskedCornerRadius
+    }
+
+    /// Sets corner radius on CALayer
+    ///
+    /// Triggered by SwiftTheme when `theme_cornerRadiusTopLeft` is used.
+    /// - Parameter value: a `ThemeCGFloatPicker` value
+    ///
     @objc func setCornerRadiusTopLeft(_ value: CGFloat) {
-        var maskedCornerRadius = self.maskedCorners
-        maskedCornerRadius.insert(.layerMinXMinYCorner)
-        self.cornerRadius = value
-        self.maskedCorners = maskedCornerRadius
+        self.setCornerRadiusSpecific(.layerMinXMinYCorner, value)
     }
 
+    /// Sets corner radius on CALayer
+    ///
+    /// Triggered by SwiftTheme when `theme_cornerRadiusTopRight` is used.
+    /// - Parameter value: a `ThemeCGFloatPicker` value
+    ///
     @objc func setCornerRadiusTopRight(_ value: CGFloat) {
-        var maskedCornerRadius = self.maskedCorners
-        maskedCornerRadius.insert(.layerMaxXMinYCorner)
-        self.cornerRadius = value
-        self.maskedCorners = maskedCornerRadius
+        self.setCornerRadiusSpecific(.layerMaxXMinYCorner, value)
     }
 
+    /// Sets corner radius on CALayer
+    ///
+    /// Triggered by SwiftTheme when `theme_cornerRadiusBottomLeft` is used.
+    /// - Parameter value: a `ThemeCGFloatPicker` value
+    ///
     @objc func setCornerRadiusBottomLeft(_ value: CGFloat) {
-        var maskedCornerRadius = self.maskedCorners
-        maskedCornerRadius.insert(.layerMaxXMaxYCorner)
-        self.cornerRadius = value
-        self.maskedCorners = maskedCornerRadius
+        self.setCornerRadiusSpecific(.layerMaxXMaxYCorner, value)
     }
 
+    /// Sets corner radius on CALayer
+    ///
+    /// Triggered by SwiftTheme when `theme_cornerRadiusBottomRight` is used.
+    /// - Parameter value: a `ThemeCGFloatPicker` value
+    ///
     @objc func setCornerRadiusBottomRight(_ value: CGFloat) {
-        var maskedCornerRadius = self.maskedCorners
-        maskedCornerRadius.insert(.layerMaxXMaxYCorner)
-        self.cornerRadius = value
-        self.maskedCorners = maskedCornerRadius
+        self.setCornerRadiusSpecific(.layerMaxXMaxYCorner, value)
     }
 }
 
