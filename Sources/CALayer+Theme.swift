@@ -1,8 +1,9 @@
 //
 //  CALayer+Theme.swift
-//  
+//  SwiftTheme
 //
-//  Created by Hooi Ling on 14/12/22.
+//  Created by Huy Nguyen on 06/02/2023.
+//  Copyright © 2023 Gesen. All rights reserved.
 //
 
 import Foundation
@@ -19,3 +20,31 @@ extension CALayer {
         cornerRadius = value
     }
 }
+
+@available(iOS 11.0, *)
+extension CALayer {
+    @objc func setCornerRadiusTopLeft(_ value: CGFloat) {
+        var maskedCornerRadius = self.maskedCorners
+        maskedCornerRadius.insert(.layerMinXMinYCorner)
+        self.maskedCorners = maskedCornerRadius
+    }
+
+    @objc func setCornerRadiusTopRight(_ value: CGFloat) {
+        var maskedCornerRadius = self.maskedCorners
+        maskedCornerRadius.insert(.layerMaxXMinYCorner)
+        self.maskedCorners = maskedCornerRadius
+    }
+
+    @objc func setCornerRadiusBottomLeft(_ value: CGFloat) {
+        var maskedCornerRadius = self.maskedCorners
+        maskedCornerRadius.insert(.layerMaxXMaxYCorner)
+        self.maskedCorners = maskedCornerRadius
+    }
+
+    @objc func setCornerRadiusBottomRight(_ value: CGFloat) {
+        var maskedCornerRadius = self.maskedCorners
+        maskedCornerRadius.insert(.layerMaxXMaxYCorner)
+        self.maskedCorners = maskedCornerRadius
+    }
+}
+

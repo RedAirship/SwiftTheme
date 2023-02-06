@@ -341,6 +341,22 @@ import UIKit
         get { return getThemePicker(self, "customSetCornerRadius:") as? ThemeCGFloatPicker }
         set { setThemePicker(self, "customSetCornerRadius:", newValue) }
     }
+    var theme_cornerRadiusTopLeft: ThemeCGFloatPicker? {
+        get { return getThemePicker(self, "setCornerRadiusTopLeft:") as? ThemeCGFloatPicker }
+        set { setThemePicker(self, "setCornerRadiusTopLeft:", newValue) }
+    }
+    var theme_cornerRadiusTopRight: ThemeCGFloatPicker? {
+        get { return getThemePicker(self, "setCornerRadiusTopRight:") as? ThemeCGFloatPicker }
+        set { setThemePicker(self, "setCornerRadiusTopRight:", newValue) }
+    }
+    var theme_cornerRadiusBottomLeft: ThemeCGFloatPicker? {
+        get { return getThemePicker(self, "setCornerRadiusBottomLeft:") as? ThemeCGFloatPicker }
+        set { setThemePicker(self, "setCornerRadiusBottomLeft:", newValue) }
+    }
+    var theme_cornerRadiusBottomRight: ThemeCGFloatPicker? {
+        get { return getThemePicker(self, "setCornerRadiusBottomRight:") as? ThemeCGFloatPicker }
+        set { setThemePicker(self, "setCornerRadiusBottomRight:", newValue) }
+    }
 }
 @objc public extension CATextLayer
 {
