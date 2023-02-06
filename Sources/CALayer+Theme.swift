@@ -26,24 +26,28 @@ extension CALayer {
     @objc func setCornerRadiusTopLeft(_ value: CGFloat) {
         var maskedCornerRadius = self.maskedCorners
         maskedCornerRadius.insert(.layerMinXMinYCorner)
+        self.cornerRadius = value
         self.maskedCorners = maskedCornerRadius
     }
 
     @objc func setCornerRadiusTopRight(_ value: CGFloat) {
         var maskedCornerRadius = self.maskedCorners
         maskedCornerRadius.insert(.layerMaxXMinYCorner)
+        self.cornerRadius = value
         self.maskedCorners = maskedCornerRadius
     }
 
     @objc func setCornerRadiusBottomLeft(_ value: CGFloat) {
         var maskedCornerRadius = self.maskedCorners
         maskedCornerRadius.insert(.layerMaxXMaxYCorner)
+        self.cornerRadius = value
         self.maskedCorners = maskedCornerRadius
     }
 
     @objc func setCornerRadiusBottomRight(_ value: CGFloat) {
         var maskedCornerRadius = self.maskedCorners
         maskedCornerRadius.insert(.layerMaxXMaxYCorner)
+        self.cornerRadius = value
         self.maskedCorners = maskedCornerRadius
     }
 }
