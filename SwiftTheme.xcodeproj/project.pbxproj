@@ -141,6 +141,14 @@
 		A3D5F8191E3C56CD00F901C1 /* ThemeActivityIndicatorViewStylePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D5F8181E3C56CD00F901C1 /* ThemeActivityIndicatorViewStylePicker.swift */; };
 		A3D5F81E1E3C5B1F00F901C1 /* ThemeFontPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D5F81D1E3C5B1F00F901C1 /* ThemeFontPicker.swift */; };
 		C7C3CC1E21CF8D6300DDA4C1 /* ThemeScrollViewIndicatorStylePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C3CC1D21CF8D6300DDA4C1 /* ThemeScrollViewIndicatorStylePicker.swift */; };
+		E5EF5F472990F56700E35259 /* UIStackview+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EF5F422990F56700E35259 /* UIStackview+Theme.swift */; };
+		E5EF5F482990F56700E35259 /* UIStackview+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EF5F422990F56700E35259 /* UIStackview+Theme.swift */; };
+		E5EF5F492990F56700E35259 /* NSLayoutConstraint+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EF5F432990F56700E35259 /* NSLayoutConstraint+Theme.swift */; };
+		E5EF5F4A2990F56700E35259 /* NSLayoutConstraint+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EF5F432990F56700E35259 /* NSLayoutConstraint+Theme.swift */; };
+		E5EF5F4E2990F67400E35259 /* CALayer+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EF5F4D2990F67400E35259 /* CALayer+Theme.swift */; };
+		E5EF5F4F2990F67400E35259 /* CALayer+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EF5F4D2990F67400E35259 /* CALayer+Theme.swift */; };
+		E5EF5F512990F69A00E35259 /* UITabBarItem+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EF5F502990F69A00E35259 /* UITabBarItem+Theme.swift */; };
+		E5EF5F522990F69A00E35259 /* UITabBarItem+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EF5F502990F69A00E35259 /* UITabBarItem+Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -357,6 +365,10 @@
 		A3D5F81D1E3C5B1F00F901C1 /* ThemeFontPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeFontPicker.swift; sourceTree = "<group>"; };
 		A3EF94C91CEC29FD0068F86C /* PlistDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PlistDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		C7C3CC1D21CF8D6300DDA4C1 /* ThemeScrollViewIndicatorStylePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeScrollViewIndicatorStylePicker.swift; sourceTree = "<group>"; };
+		E5EF5F422990F56700E35259 /* UIStackview+Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStackview+Theme.swift"; sourceTree = "<group>"; };
+		E5EF5F432990F56700E35259 /* NSLayoutConstraint+Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Theme.swift"; sourceTree = "<group>"; };
+		E5EF5F4D2990F67400E35259 /* CALayer+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Theme.swift"; sourceTree = "<group>"; };
+		E5EF5F502990F69A00E35259 /* UITabBarItem+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarItem+Theme.swift"; sourceTree = "<group>"; };
 		ECEAC74D333D35C31C5B72FB /* Pods-PlistDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlistDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlistDemo/Pods-PlistDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		F49FBCCD673D55E76D872AA5 /* libPods-PlistDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PlistDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -624,6 +636,8 @@
 		18D642DF1C53638200DADEC5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				E5EF5F432990F56700E35259 /* NSLayoutConstraint+Theme.swift */,
+				E5EF5F422990F56700E35259 /* UIStackview+Theme.swift */,
 				1C6079BA231B7D2200BCE899 /* ThemeAttributes */,
 				A373E3A31E3C387D00ED2F2B /* ThemePickers */,
 				18D642E31C53638200DADEC5 /* NSObject+Theme.swift */,
@@ -635,6 +649,8 @@
 				6632073427332BC7002F3F59 /* ThemeTabBarAppearancePicker.swift */,
 				18D642E11C53638200DADEC5 /* UIColorExtension.swift */,
 				18D642E21C53638200DADEC5 /* UIKit+Theme.swift */,
+				E5EF5F4D2990F67400E35259 /* CALayer+Theme.swift */,
+				E5EF5F502990F69A00E35259 /* UITabBarItem+Theme.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -1162,6 +1178,7 @@
 				187C0D1E1C562AC00000FA89 /* ThemePicker.swift in Sources */,
 				1C8F0FD324F6495D00004648 /* ThemeAttributedStringPicker.swift in Sources */,
 				1C6079B7231B72F100BCE899 /* ThemeVisualEffectPicker.swift in Sources */,
+				E5EF5F512990F69A00E35259 /* UITabBarItem+Theme.swift in Sources */,
 				A322D88D1E665CFC0039520F /* ThemeKeyboardAppearancePicker.swift in Sources */,
 				1C8EE824239357D700BD60BE /* ThemeBlurEffectPicker.swift in Sources */,
 				A373E3861E3C344200ED2F2B /* ThemeImagePicker.swift in Sources */,
@@ -1176,7 +1193,10 @@
 				6632073527332BC7002F3F59 /* ThemeTabBarAppearancePicker.swift in Sources */,
 				A373E39A1E3C34C600ED2F2B /* ThemeStatusBarStylePicker.swift in Sources */,
 				0A2210CB207090BF006BC28D /* NSAttributedString+Merge.swift in Sources */,
+				E5EF5F492990F56700E35259 /* NSLayoutConstraint+Theme.swift in Sources */,
 				A3A389991D8E2F2800797F17 /* ThemeManager+OC.swift in Sources */,
+				E5EF5F472990F56700E35259 /* UIStackview+Theme.swift in Sources */,
+				E5EF5F4E2990F67400E35259 /* CALayer+Theme.swift in Sources */,
 				0AD183E6204F8B90005F5D85 /* UITextField+PlaceholderAttributes.swift in Sources */,
 				A373E3811E3C341200ED2F2B /* ThemeColorPicker.swift in Sources */,
 			);
@@ -1235,12 +1255,16 @@
 				A37F8C831F8A43B300ABB5EC /* ThemePicker.swift in Sources */,
 				6632073627332BC7002F3F59 /* ThemeTabBarAppearancePicker.swift in Sources */,
 				A37F8C841F8A43B300ABB5EC /* ThemeDictionaryPicker.swift in Sources */,
+				E5EF5F4A2990F56700E35259 /* NSLayoutConstraint+Theme.swift in Sources */,
 				A37F8C851F8A43B300ABB5EC /* ThemeCGColorPicker.swift in Sources */,
+				E5EF5F522990F69A00E35259 /* UITabBarItem+Theme.swift in Sources */,
 				A37F8C861F8A43B300ABB5EC /* ThemeCGFloatPicker.swift in Sources */,
 				A37F8C871F8A43B300ABB5EC /* ThemeColorPicker.swift in Sources */,
 				A37F8C881F8A43B300ABB5EC /* ThemeFontPicker.swift in Sources */,
 				A37F8C891F8A43B300ABB5EC /* ThemeImagePicker.swift in Sources */,
 				A37F8C971F8A551E00ABB5EC /* ThemeStatusBarStylePicker.swift in Sources */,
+				E5EF5F4F2990F67400E35259 /* CALayer+Theme.swift in Sources */,
+				E5EF5F482990F56700E35259 /* UIStackview+Theme.swift in Sources */,
 				A37F8C8A1F8A43B300ABB5EC /* ThemeStatePicker.swift in Sources */,
 				A37F8C8D1F8A43B300ABB5EC /* ThemeActivityIndicatorViewStylePicker.swift in Sources */,
 				A37F8C8E1F8A43B300ABB5EC /* ThemeKeyboardAppearancePicker.swift in Sources */,

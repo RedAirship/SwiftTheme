@@ -1,10 +1,10 @@
 //
-//  File.swift
-//  
+//  UITabBarItem+Theme.swift
+//  SwiftTheme
 //
-//  Created by Hooi Ling on 13/12/22.
+//  Created by Huy Nguyen on 06/02/2023.
+//  Copyright © 2023 Gesen. All rights reserved.
 //
-
 
 import UIKit
 
@@ -26,3 +26,4 @@ extension UITabBarItem {
     }
 }
 #endif
+
