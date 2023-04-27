@@ -341,6 +341,10 @@ import UIKit
         get { return getThemePicker(self, "customSetCornerRadius:") as? ThemeCGFloatPicker }
         set { setThemePicker(self, "customSetCornerRadius:", newValue) }
     }
+    var theme_cornerRadiusNotMasksToBounds: ThemeCGFloatPicker? {
+        get { return getThemePicker(self, "setCornerRadiusNotMasksToBounds:") as? ThemeCGFloatPicker }
+        set { setThemePicker(self, "setCornerRadiusNotMasksToBounds:", newValue) }
+    }
     var theme_cornerRadiusTopLeft: ThemeCGFloatPicker? {
         get { return getThemePicker(self, "setCornerRadiusTopLeft:") as? ThemeCGFloatPicker }
         set { setThemePicker(self, "setCornerRadiusTopLeft:", newValue) }

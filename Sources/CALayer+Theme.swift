@@ -18,6 +18,18 @@ extension CALayer {
     /// Not called setCornerRadius so as not to conflict with existing func with same name.
     @objc func customSetCornerRadius(_ value: CGFloat) {
         cornerRadius = value
+        masksToBounds = value > 0
+    }
+
+    /// Sets corner radius on CALayer
+    /// - Parameter value: a `ThemeCGFloatPicker` value
+    ///
+    /// Not called setCornerRadius so as not to conflict with existing func with same name.
+    ///
+    /// NOTES: `masksToBounds` consider to set manually
+    ///
+    @objc func setCornerRadiusNotMasksToBounds(_ value: CGFloat) {
+        cornerRadius = value
     }
 }
 
