@@ -531,14 +531,14 @@ import UIKit
 }
 #endif
 
-private func getThemePicker(
+func getThemePicker(
     _ object : NSObject,
     _ selector : String
 ) -> ThemePicker? {
     return ThemePicker.getThemePicker(object, selector)
 }
 
-private func setThemePicker(
+func setThemePicker(
     _ object : NSObject,
     _ selector : String,
     _ picker : ThemePicker?

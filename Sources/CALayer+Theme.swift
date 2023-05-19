@@ -9,6 +9,13 @@
 import Foundation
 import QuartzCore
 
+@objc public extension CALayer {
+    var theme_backgroundColorOrGradient: ThemeAnyPicker? {
+        get { return getThemePicker(self, "setBackgroundColorOrGradient:") as? ThemeAnyPicker }
+        set { setThemePicker(self, "setBackgroundColorOrGradient:", newValue) }
+    }
+}
+
 extension CALayer {
     /// Sets corner radius on CALayer
     ///
