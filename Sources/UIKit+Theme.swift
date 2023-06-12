@@ -223,6 +223,14 @@ import UIKit
         get { return getThemePicker(self, "setTextColor:") as? ThemeColorPicker }
         set { setThemePicker(self, "setTextColor:", newValue) }
     }
+    var theme_textAttributes: ThemeStringAttributesPicker? {
+        get { return getThemePicker(self, "updateTextViewTextAttributes:") as? ThemeStringAttributesPicker }
+        set { setThemePicker(self, "updateTextViewTextAttributes:", newValue) }
+    }
+    var theme_linkColor: ThemeColorPicker? {
+        get { return getThemePicker(self, "setTextLinkColor:") as? ThemeColorPicker }
+        set { setThemePicker(self, "setTextLinkColor:", newValue) }
+    }
 }
 @objc public extension UISearchBar
 {

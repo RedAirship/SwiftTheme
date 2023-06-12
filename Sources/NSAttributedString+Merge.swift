@@ -29,7 +29,7 @@ extension NSAttributedString {
 // Merge a dictionary into another dictionary, returning a new dictionary.
 // The values of the other dictionary overwrite the values of the current
 // dictionary.
-private extension Dictionary {
+extension Dictionary {
     func merge(with dict: Dictionary) -> Dictionary {
         return dict.reduce(into: self) { (result, pair) in
             let (key, value) = pair
