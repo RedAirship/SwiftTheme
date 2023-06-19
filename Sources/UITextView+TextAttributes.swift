@@ -13,20 +13,13 @@ typealias Attributes = [NSAttributedString.Key: Any]
 extension UITextView {
     @objc func updateTextViewTextAttributes(_ newAttributes: Attributes) {
         guard let attributedText = self.attributedText,
-              let attribute = newAttributes.attribute(for: .font, type: UIFont.self) else {
+              let font = newAttributes[.font] as? UIFont else {
             return
         }
-        let font = attribute.value
-        let attributes = attribute.newAttributes
 
         /// Create new `NSMutableAttributedString` based on `attributedHtmlString` merge with new attributes
         let mutableString = NSMutableAttributedString(attributedString: attributedText)
         let range = NSMakeRange(0, mutableString.length)
-        mutableString.enumerateAttributes(in: range, options: []) {
-            (currentAttributes, range, _) in
-            let mergedAttributes = currentAttributes.merge(with: attributes)
-            mutableString.setAttributes(mergedAttributes, range: range)
-        }
 
         /// Replace for `font` and `link` from `NSMutableAttributedString`
         mutableString.beginEditing()
@@ -56,21 +49,5 @@ extension UITextView {
             .underlineColor: UIColor.clear,
             .foregroundColor: color
         ]
-    }
-}
-
-private extension Attributes {
-    /// To get value for key parameter and remove that key/value from dictionary attributes
-    /// - Parameters:
-    ///   - key: A attribute string key
-    ///   - type: A type for casting to that value
-    /// - Returns: A tupe with value and new attributes after removed
-    func attribute<T>(for key: NSAttributedString.Key, type: T.Type) -> (value: T, newAttributes: Attributes)? {
-        guard let valueForKey = self[key] as? T else {
-            return nil
-        }
-        var newAttributes = self
-        newAttributes.removeValue(forKey: key)
-        return (value: valueForKey, newAttributes: newAttributes)
     }
 }
