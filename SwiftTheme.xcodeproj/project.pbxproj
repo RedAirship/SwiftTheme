@@ -78,6 +78,7 @@
 		1C8F0FD524F654E000004648 /* ThemeAnyPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8F0FD424F654E000004648 /* ThemeAnyPicker.swift */; };
 		28C56555C2CDD153B7082CC7 /* libPods-JsonDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56CB27A67341172FF363A8B4 /* libPods-JsonDemo.a */; };
 		4D4A1E2C4393C7FA0F35401B /* libPods-PlistDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F49FBCCD673D55E76D872AA5 /* libPods-PlistDemo.a */; };
+		63E820C52A5407EB003038C7 /* NSAttributedString+UpperCased.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E820C42A5407EB003038C7 /* NSAttributedString+UpperCased.swift */; };
 		6632073527332BC7002F3F59 /* ThemeTabBarAppearancePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6632073427332BC7002F3F59 /* ThemeTabBarAppearancePicker.swift */; };
 		6632073627332BC7002F3F59 /* ThemeTabBarAppearancePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6632073427332BC7002F3F59 /* ThemeTabBarAppearancePicker.swift */; };
 		A322D88D1E665CFC0039520F /* ThemeKeyboardAppearancePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A322D88C1E665CFC0039520F /* ThemeKeyboardAppearancePicker.swift */; };
@@ -312,6 +313,7 @@
 		33DAE847E97B3D75B346DC84 /* Pods-JsonDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JsonDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JsonDemo/Pods-JsonDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		417E8CF58D0A02C9ADB1FB59 /* Pods-PlistDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlistDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlistDemo/Pods-PlistDemo.release.xcconfig"; sourceTree = "<group>"; };
 		56CB27A67341172FF363A8B4 /* libPods-JsonDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JsonDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63E820C42A5407EB003038C7 /* NSAttributedString+UpperCased.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+UpperCased.swift"; sourceTree = "<group>"; };
 		6632073427332BC7002F3F59 /* ThemeTabBarAppearancePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeTabBarAppearancePicker.swift; sourceTree = "<group>"; };
 		93F20E6BF028F63DFA7AB48C /* libPods-Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A322D88C1E665CFC0039520F /* ThemeKeyboardAppearancePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeKeyboardAppearancePicker.swift; sourceTree = "<group>"; };
@@ -659,6 +661,7 @@
 			isa = PBXGroup;
 			children = (
 				0A2210CA207090BF006BC28D /* NSAttributedString+Merge.swift */,
+				63E820C42A5407EB003038C7 /* NSAttributedString+UpperCased.swift */,
 				1C6079BB231B7D6A00BCE899 /* UILabel+TextAttributes.swift */,
 				0A2210CC207095F6006BC28D /* UIRefreshControl+TitleAttributes.swift */,
 				0AD183E5204F8B90005F5D85 /* UITextField+PlaceholderAttributes.swift */,
@@ -1193,6 +1196,7 @@
 				6632073527332BC7002F3F59 /* ThemeTabBarAppearancePicker.swift in Sources */,
 				A373E39A1E3C34C600ED2F2B /* ThemeStatusBarStylePicker.swift in Sources */,
 				0A2210CB207090BF006BC28D /* NSAttributedString+Merge.swift in Sources */,
+				63E820C52A5407EB003038C7 /* NSAttributedString+UpperCased.swift in Sources */,
 				E5EF5F492990F56700E35259 /* NSLayoutConstraint+Theme.swift in Sources */,
 				A3A389991D8E2F2800797F17 /* ThemeManager+OC.swift in Sources */,
 				E5EF5F472990F56700E35259 /* UIStackview+Theme.swift in Sources */,

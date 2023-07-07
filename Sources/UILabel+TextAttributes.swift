@@ -8,13 +8,20 @@
 
 import UIKit
 
+public let IsUppercaseKey = NSAttributedString.Key(rawValue: "isUppercase")
+
 extension UILabel {
     @objc func updateTextAttributes(_ newAttributes: [NSAttributedString.Key: Any]) {
         guard let text = self.attributedText else { return }
-        
-        self.attributedText = NSAttributedString(
+        let attributedString = NSAttributedString(
             attributedString: text,
             merging: newAttributes
         )
+
+        if newAttributes[IsUppercaseKey] as? Bool == true {
+            self.attributedText = attributedString.uppercased()
+        } else {
+            self.attributedText = attributedString
+        }
     }
 }
